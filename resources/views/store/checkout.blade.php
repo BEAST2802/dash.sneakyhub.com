@@ -33,9 +33,6 @@
                     <!-- Main content -->
                     <div class="invoice p-3 mb-3">
                         <!-- title row -->
-                        <div class="row">
-                            <div class="col-12">
-                                <h4>
     <!-- AD CONTENT -->
     <script type="text/javascript">
     	atOptions = {
@@ -48,6 +45,9 @@
 	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/9248df68e86c51704b8d4cdbab8d1453/invoke.js"></scr' + 'ipt>');
             </script>
     <!-- END AD CONTENT -->
+                        <div class="row">
+                            <div class="col-12">
+                                <h4>
                                     <i class="fas fa-globe"></i> {{ config('app.name', 'Laravel') }}
                                     <small class="float-right">{{ __('Date') }}:
                                         {{ Carbon\Carbon::now()->isoFormat('LL') }}</small>
