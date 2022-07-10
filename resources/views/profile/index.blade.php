@@ -114,6 +114,18 @@
                                                     <span class="badge badge-warning"><i
                                                             class="fa fa-user-check mr-2"></i>
                                                         {{_("Make a purchase to reveal your referral-URL")}}</span>
+    <!-- AD CONTENT -->
+    <script type="text/javascript">
+    	atOptions = {
+    		'key' : '9248df68e86c51704b8d4cdbab8d1453',
+    		'format' : 'iframe',
+    		'height' : 90,
+    		'width' : 728,
+    		'params' : {}
+    	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/9248df68e86c51704b8d4cdbab8d1453/invoke.js"></scr' + 'ipt>');
+            </script>
+    <!-- END AD CONTENT -->
                                         @endif
                                             </div>
                                         @endif
