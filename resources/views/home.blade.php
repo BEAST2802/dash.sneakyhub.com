@@ -122,6 +122,18 @@
                                 {!! $useful_link->description !!}
                             </div>
                         @endforeach
+    <!-- AD CONTENT -->
+    <script type="text/javascript">
+    	atOptions = {
+    		'key' : '9248df68e86c51704b8d4cdbab8d1453',
+    		'format' : 'iframe',
+    		'height' : 90,
+    		'width' : 728,
+    		'params' : {}
+    	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/9248df68e86c51704b8d4cdbab8d1453/invoke.js"></scr' + 'ipt>');
+            </script>
+    <!-- END AD CONTENT -->
                     </div>
                     <!-- /.card-body -->
                 </div>
