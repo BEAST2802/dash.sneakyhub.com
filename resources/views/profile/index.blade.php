@@ -97,6 +97,7 @@
                                         </p>
                                         <div class="mt-1">
                                             <span class="badge badge-primary"><i
+                                            <p>Your Shards</p>
                                                     class="fa fa-coins mr-2"></i>{{ $user->Credits() }}</span>
                                         </div>
 
