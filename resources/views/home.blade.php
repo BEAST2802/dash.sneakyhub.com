@@ -176,6 +176,18 @@
                                 </li>
                             @endforeach
                         </ul>
+    <!-- AD CONTENT -->
+    <script type="text/javascript">
+	atOptions = {
+		'key' : 'ec1919e671b7033ca2e27a17d377af31',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/ec1919e671b7033ca2e27a17d377af31/invoke.js"></scr' + 'ipt>');
+    </script>
+    <!-- END AD CONTENT -->
                     </div>
                     <!-- /.card-body -->
                 </div>
