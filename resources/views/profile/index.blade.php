@@ -110,6 +110,13 @@
                                                         <span onclick="onClickCopy()" id="RefLink" style="cursor: pointer;">
                                                             {{route("register")}}?ref={{$user->referral_code}}</span>
                                                     </span>
+                                                @else
+                                                    <span class="badge badge-warning"><i
+                                                            class="fa fa-user-check mr-2"></i>
+                                                        {{_("Make a purchase to reveal your referral-URL")}}</span>
+                                        @endif
+                                            </div>
+                                        @endif
     <!-- AD CONTENT -->
     <script type="text/javascript">
     	atOptions = {
@@ -122,13 +129,6 @@
 	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/9248df68e86c51704b8d4cdbab8d1453/invoke.js"></scr' + 'ipt>');
             </script>
     <!-- END AD CONTENT -->
-                                                @else
-                                                    <span class="badge badge-warning"><i
-                                                            class="fa fa-user-check mr-2"></i>
-                                                        {{_("Make a purchase to reveal your referral-URL")}}</span>
-                                        @endif
-                                            </div>
-                                        @endif
                                         </div>
 
                                         <div class="text-center text-sm-right"><span
