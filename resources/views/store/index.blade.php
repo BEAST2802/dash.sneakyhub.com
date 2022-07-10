@@ -95,9 +95,6 @@
 
             @endif
 
-
-        </div>
-
     <!-- AD CONTENT -->
     <script type="text/javascript">
     	atOptions = {
@@ -111,6 +108,7 @@
             </script>
     <!-- END AD CONTENT -->
 
+        </div>
     </section>
     <!-- END CONTENT -->
 
