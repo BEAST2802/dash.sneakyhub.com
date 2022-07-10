@@ -97,8 +97,6 @@
 
 
         </div>
-    </section>
-    <!-- END CONTENT -->
 
     <!-- AD CONTENT -->
     <script type="text/javascript">
@@ -112,6 +110,10 @@
 	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/9248df68e86c51704b8d4cdbab8d1453/invoke.js"></scr' + 'ipt>');
             </script>
     <!-- END AD CONTENT -->
+
+    </section>
+    <!-- END CONTENT -->
+
 
     <script>
         const getUrlParameter = (param) => {
