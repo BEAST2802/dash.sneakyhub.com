@@ -107,6 +107,20 @@
                             {{ __('Useful Links') }}
                         </h3>
                     </div>
+                    <div class="mt-1">
+                                                    <span class="badge badge-success"><i
+                                                            class="fa fa-user-check mr-2"></i>
+                                                            <p>Your Referral Link</p>
+                                                        {{_("Referral URL")}} :
+                                                        <span onclick="onClickCopy()" id="RefLink" style="cursor: pointer;">
+                                                            {{route("register")}}?ref={{$user->referral_code}}</span>
+                                                    </span>
+                                                @else
+                                                    <span class="badge badge-warning"><i
+                                                            class="fa fa-user-check mr-2"></i>
+                                                        {{_("Make a purchase to reveal your referral-URL")}}</span>
+                                        @endif
+                    </div>
                     <!-- /.card-header -->
                     <div class="card-body">
                         @foreach ($useful_links as $useful_link)
