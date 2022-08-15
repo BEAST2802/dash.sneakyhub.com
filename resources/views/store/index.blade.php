@@ -32,18 +32,6 @@
                 </button>
             </div>
 
-    <!-- AD CONTENT -->
-            <script type="text/javascript">
-    	atOptions = {
-    		'key' : '9248df68e86c51704b8d4cdbab8d1453',
-    		'format' : 'iframe',
-    		'height' : 90,
-    		'width' : 728,
-    		'params' : {}
-    	};
-	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/9248df68e86c51704b8d4cdbab8d1453/invoke.js"></scr' + 'ipt>');
-            </script>
-    <!-- END AD CONTENT -->
             @if ($isPaymentSetup && $products->count() > 0)
 
                 <div class="card">
@@ -95,23 +83,10 @@
 
             @endif
 
-    <!-- AD CONTENT -->
-    <script type="text/javascript">
-    	atOptions = {
-    		'key' : '9248df68e86c51704b8d4cdbab8d1453',
-    		'format' : 'iframe',
-    		'height' : 90,
-    		'width' : 728,
-    		'params' : {}
-    	};
-	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/9248df68e86c51704b8d4cdbab8d1453/invoke.js"></scr' + 'ipt>');
-            </script>
-    <!-- END AD CONTENT -->
 
         </div>
     </section>
     <!-- END CONTENT -->
-
 
     <script>
         const getUrlParameter = (param) => {

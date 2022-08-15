@@ -64,7 +64,7 @@
 
                                         <div class="form-group">
                                             <label for="price">{{__('Price in')}} {{CREDITS_DISPLAY_NAME}}</label>
-                                            <input value="{{$product->price ??  old('price')}}" id="price" name="price"
+                                            <input value="{{$product->price ??  old('price')}}" id="price" name="price" step=".01"
                                                    type="number"
                                                    class="form-control @error('price') is-invalid @enderror"
                                                    required="required">
@@ -292,7 +292,9 @@
                                         {{__('This product will only be available for these eggs')}}
                                     </div>
                                 </div>
-
+                                <div class="text-muted">
+                                    {{__('No Eggs or Nodes shown?')}} <a href="{{route('admin.overview.sync')}}">{{__("Sync now")}}</a>
+                                </div>
                             </div>
                         </div>
                     </div>

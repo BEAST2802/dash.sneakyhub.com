@@ -72,7 +72,7 @@
                                 </div>
                                 <div class="col-lg-8">
                                        <span style="max-width: 250px;"
-                                             class="d-inline-block text-truncate badge {{$user->role == 'admin' ? 'badge-info' : 'badge-secondary'}}">
+                                             class="d-inline-block text-truncate badge {{$user->role == 'admin' || $user->role == 'mod' ? 'badge-info' : 'badge-secondary'}}">
                                            {{$user->role}}
                                        </span>
                                 </div>
@@ -248,7 +248,7 @@
             </div>
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="card-title"><i class="fas fa-user-check mr-2"></i>{{__('Referals')}} ({{__("referral-code")}} : {{$user->referral_code}})</h5>
+                        <h5 class="card-title"><i class="fas fa-user-check mr-2"></i>{{__('Referals')}} ({{__("referral-code")}}: {{$user->referral_code}})</h5>
                     </div>
                     <div class="card-body table-responsive">
 

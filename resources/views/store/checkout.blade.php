@@ -24,18 +24,6 @@
 
     <!-- MAIN CONTENT -->
     <section x-data="serverApp()" x-init="$watch('paymentMethod', value => setPaymentRoute(value))" class="content">
-    <!-- AD CONTENT -->
-    <script type="text/javascript">
-    	atOptions = {
-    		'key' : '9248df68e86c51704b8d4cdbab8d1453',
-    		'format' : 'iframe',
-    		'height' : 90,
-    		'width' : 728,
-    		'params' : {}
-    	};
-	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/9248df68e86c51704b8d4cdbab8d1453/invoke.js"></scr' + 'ipt>');
-            </script>
-    <!-- END AD CONTENT -->
         <div class="container-fluid">
 
             <div class="row">
@@ -157,18 +145,6 @@
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div>
-    <!-- AD CONTENT -->
-    <script type="text/javascript">
-    	atOptions = {
-    		'key' : '9248df68e86c51704b8d4cdbab8d1453',
-    		'format' : 'iframe',
-    		'height' : 90,
-    		'width' : 728,
-    		'params' : {}
-    	};
-	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/9248df68e86c51704b8d4cdbab8d1453/invoke.js"></scr' + 'ipt>');
-            </script>
-    <!-- END AD CONTENT -->
     </section>
     <!-- END CONTENT -->
 

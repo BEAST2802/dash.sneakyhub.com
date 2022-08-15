@@ -93,7 +93,7 @@
                     </div>
                     @if(config('SETTINGS::REFERRAL::ENABLED') == "true")
                         <div class="input-group mb-3">
-                            <input type="text" value="{{ \Request::get('ref') }}" class="form-control" name="referral_code" placeholder="{{__('Referral code')}} ( {{__("optional")}} )">
+                            <input type="text" value="{{ \Request::get('ref') }}" class="form-control" name="referral_code" placeholder="{{__('Referral code')}} ({{__("optional")}})">
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-user-check"></span>
@@ -101,6 +101,7 @@
                             </div>
                         </div>
                     @endif
+                    @if (config('SETTINGS::RECAPTCHA:ENABLED') == 'true')
                     <div class="input-group mb-3">
                         {!! htmlFormSnippet() !!}
                         @error('g-recaptcha-response')
@@ -109,6 +110,7 @@
                             </span>
                         @enderror
                     </div>
+                    @endif
 
                     <div class="row">
                         <div class="col-8">

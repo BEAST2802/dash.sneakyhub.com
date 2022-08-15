@@ -23,18 +23,6 @@
 
     <!-- MAIN CONTENT -->
     <section class="content">
-    <!-- AD CONTENT -->
-    <script type="text/javascript">
-    	atOptions = {
-    		'key' : '9248df68e86c51704b8d4cdbab8d1453',
-    		'format' : 'iframe',
-    		'height' : 90,
-    		'width' : 728,
-    		'params' : {}
-    	};
-	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/9248df68e86c51704b8d4cdbab8d1453/invoke.js"></scr' + 'ipt>');
-            </script>
-    <!-- END AD CONTENT -->
         <div class="container-fluid">
 
             <!-- CUSTOM CONTENT -->
@@ -167,67 +155,16 @@
                                 <i class="fas fa-tools mr-2"></i>
                                 <span>{{ __('Manage') }}</span>
                             </a>
-                            <button onclick="confirmSubmit('{{ $server->id }}', handleServerDelete);" target="__blank"
-                                class="btn btn-danger mx-3 w-100 align-items-center justify-content-center d-flex">
-                                <i class="fas fa-trash mr-2"></i>
-                                <span>{{ __('Delete') }}</span>
-                            </button>
+                            <a href="{{ route('servers.show', ['server' => $server->id])}}" class="btn btn-warning mx-3 w-100 align-items-center justify-content-center d-flex">
+                                <i class="fas fa-cog mr-2"></i>
+                                <span>{{ __('Settings') }}</span>
+                            </a>
                         </div>
                     </div>
                 @endforeach
             </div>
             <!-- END CUSTOM CONTENT -->
         </div>
-    <!-- AD CONTENT -->
-    <script type="text/javascript">
-    	atOptions = {
-    		'key' : '9248df68e86c51704b8d4cdbab8d1453',
-    		'format' : 'iframe',
-    		'height' : 90,
-    		'width' : 728,
-    		'params' : {}
-    	};
-	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/9248df68e86c51704b8d4cdbab8d1453/invoke.js"></scr' + 'ipt>');
-            </script>
-    <!-- END AD CONTENT -->
     </section>
     <!-- END CONTENT -->
-
-    <script>
-        const confirmSubmit = (serverId, handleServerDelete) => {
-            // Confirm delete submit with sweetalert
-            Swal.fire({
-                title: "{{ __('Are you sure?') }}",
-                text: "{{ __('This is an irreversible action, all files of this server will be removed.') }}",
-                icon: 'warning',
-                confirmButtonColor: '#d9534f',
-                showCancelButton: true,
-                confirmButtonText: "{{ __('Yes, delete it!') }}",
-                cancelButtonText: "{{ __('No, cancel!') }}",
-                reverseButtons: true
-            }).then((result) => {
-                if (result.value) {
-                    handleServerDelete(serverId);
-                    return
-                }
-                Swal.fire("{{ __('Canceled ...') }}", `{{ __('Deletion has been canceled.') }}`, 'info');
-            });
-        }
-
-        const handleServerDelete = (serverId) => {
-            // Delete server
-            fetch("{{ route('servers.destroy', '') }}" + '/' + serverId, {
-                method: 'DELETE',
-                headers: {
-                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                }
-            }).then(() => {
-                window.location.reload();
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            $('[data-toggle="popover"]').popover();
-        });
-    </script>
 @endsection

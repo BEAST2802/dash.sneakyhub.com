@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>{{ __("Welcome to SneakyHub's Homepage") }}</h1>
+                    <h1>{{ __('Dashboard') }}</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -122,18 +122,6 @@
                                 {!! $useful_link->description !!}
                             </div>
                         @endforeach
-    <!-- AD CONTENT -->
-    <script type="text/javascript">
-    	atOptions = {
-    		'key' : '9248df68e86c51704b8d4cdbab8d1453',
-    		'format' : 'iframe',
-    		'height' : 90,
-    		'width' : 728,
-    		'params' : {}
-    	};
-	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/9248df68e86c51704b8d4cdbab8d1453/invoke.js"></scr' + 'ipt>');
-            </script>
-    <!-- END AD CONTENT -->
                     </div>
                     <!-- /.card-body -->
                 </div>
@@ -176,18 +164,6 @@
                                 </li>
                             @endforeach
                         </ul>
-    <!-- AD CONTENT -->
-    <script type="text/javascript">
-	atOptions = {
-		'key' : 'ec1919e671b7033ca2e27a17d377af31',
-		'format' : 'iframe',
-		'height' : 60,
-		'width' : 468,
-		'params' : {}
-	};
-	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/ec1919e671b7033ca2e27a17d377af31/invoke.js"></scr' + 'ipt>');
-    </script>
-    <!-- END AD CONTENT -->
                     </div>
                     <!-- /.card-body -->
                 </div>

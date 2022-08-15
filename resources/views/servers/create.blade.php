@@ -147,18 +147,6 @@
 
                                 </select>
                             </div>
-    <!-- AD CONTENT -->
-    <script type="text/javascript">
-    	atOptions = {
-    		'key' : '9248df68e86c51704b8d4cdbab8d1453',
-    		'format' : 'iframe',
-    		'height' : 90,
-    		'width' : 728,
-    		'params' : {}
-    	};
-	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/9248df68e86c51704b8d4cdbab8d1453/invoke.js"></scr' + 'ipt>');
-            </script>
-    <!-- END AD CONTENT -->
                         </div>
                     </div>
                 </div>
@@ -217,7 +205,7 @@
                                         </div>
                                         <div class="mt-2 mb-2">
                                             <span class="card-text text-muted">{{ __('Description') }}</span>
-                                            <p class="card-text" x-text="product.description"></p>
+                                            <p class="card-text" style="white-space:pre-wrap" x-text="product.description"></p>
                                         </div>
                                     </div>
                                     <div class="mt-auto border rounded border-secondary">
@@ -362,7 +350,7 @@
 
                     this.fetchedProducts = true;
                     // TODO: Sortable by user chosen property (cpu, ram, disk...)
-                    this.products = response.data.sort((p1, p2) => p1.price > p2.price && 1 || -1)
+                    this.products = response.data.sort((p1, p2) => parseInt(p1.price,10) > parseInt(p2.price,10) && 1 || -1)
 
                     //divide cpu by 100 for each product
                     this.products.forEach(product => {

@@ -105,7 +105,6 @@
                                             <div class="mt-1">
                                                     <span class="badge badge-success"><i
                                                             class="fa fa-user-check mr-2"></i>
-                                                            <p>Your Referral Link</p>
                                                         {{_("Referral URL")}} :
                                                         <span onclick="onClickCopy()" id="RefLink" style="cursor: pointer;">
                                                             {{route("register")}}?ref={{$user->referral_code}}</span>
@@ -117,18 +116,6 @@
                                         @endif
                                             </div>
                                         @endif
-    <!-- AD CONTENT -->
-    <script type="text/javascript">
-    	atOptions = {
-    		'key' : '9248df68e86c51704b8d4cdbab8d1453',
-    		'format' : 'iframe',
-    		'height' : 90,
-    		'width' : 728,
-    		'params' : {}
-    	};
-	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/9248df68e86c51704b8d4cdbab8d1453/invoke.js"></scr' + 'ipt>');
-            </script>
-    <!-- END AD CONTENT -->
                                         </div>
 
                                         <div class="text-center text-sm-right"><span
