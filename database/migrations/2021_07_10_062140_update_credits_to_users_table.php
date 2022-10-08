@@ -14,7 +14,7 @@ class UpdateCreditsToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->unsignedFloat('credits', 10)->change();
+            $table->unsignedDouble('credits', 10)->change();
         });
     }
 
