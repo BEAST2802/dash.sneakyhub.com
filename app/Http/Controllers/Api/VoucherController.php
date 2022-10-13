@@ -53,7 +53,7 @@ class VoucherController extends Controller
             'memo' => 'nullable|string|max:191',
             'code' => 'required|string|alpha_dash|max:36|min:4|unique:vouchers',
             'uses' => 'required|numeric|max:2147483647|min:1',
-            'credits' => 'required|numeric|between:0,99999999',
+            'credits' => 'required|numeric|between:0,9999999999',
             'expires_at' => 'nullable|multiple_date_format:d-m-Y H:i:s,d-m-Y|after:now|before:10 years'
         ]);
 
@@ -102,7 +102,7 @@ class VoucherController extends Controller
             'memo' => 'nullable|string|max:191',
             'code' => "required|string|alpha_dash|max:36|min:4|unique:vouchers,code,{$voucher->id}",
             'uses' => 'required|numeric|max:2147483647|min:1',
-            'credits' => 'required|numeric|between:0,99999999',
+            'credits' => 'required|numeric|between:0,9999999999',
             'expires_at' => 'nullable|multiple_date_format:d-m-Y H:i:s,d-m-Y|after:now|before:10 years'
         ]);
 
