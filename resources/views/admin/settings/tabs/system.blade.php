@@ -70,6 +70,17 @@
                             value="{{ config('SETTINGS::SYSTEM:PTERODACTYL:URL') }}"
                             class="form-control @error('pterodactyl-url') is-invalid @enderror" required>
                     </div>
+                    <div class="custom-control mb-3 p-0">
+                        <div class="col m-0 p-0 d-flex justify-content-between align-items-center">
+                            <label for="per-page-limit">{{ __('Pterodactyl API perPage limit') }}</label>
+                            <i data-toggle="popover" data-trigger="hover" data-html="true"
+                                data-content="{{ __('The Pterodactyl API perPage limit. It is necessary to set it higher than your server count.') }}"
+                                class="fas fa-info-circle"></i>
+                        </div>
+                        <input x-model="per-page-limit" id="per-page-limit" name="per-page-limit" type="number"
+                            value="{{ config('SETTINGS::SYSTEM:PTERODACTYL:PER_PAGE_LIMIT') }}"
+                            class="form-control @error('per-page-limit') is-invalid @enderror" required>
+                    </div>
                     <div class="custom-control p-0 mb-3">
                         <div class="col m-0 p-0 d-flex justify-content-between align-items-center">
                             <label for="pterodactyl-api-key">{{ __('Pterodactyl API Key') }}</label>
@@ -91,6 +102,11 @@
                         <input x-model="pterodactyl-admin-api-key" id="pterodactyl-admin-api-key" name="pterodactyl-admin-api-key"
                                type="text" value="{{ config('SETTINGS::SYSTEM:PTERODACTYL:ADMIN_USER_TOKEN') }}"
                                class="form-control @error('pterodactyl-admin-api-key') is-invalid @enderror" required>
+                        @error('pterodactyl-admin-api-key')
+                                <div class="text-danger">
+                                    {{$message}}
+                                </div>
+                        @enderror
                     </div>
                     <a href="{{route('admin.settings.checkPteroClientkey')}}"> <button type="button" class="btn btn-secondary">{{__("Test API")}}</button></a>
                 </div>
@@ -179,6 +195,21 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <div class="custom-control mb-1 p-0">
+                        <div class="col m-0 p-0 d-flex justify-content-between align-items-center">
+                            <div>
+                                <input value="true" id="enable-upgrade" name="enable-upgrade"
+                                    {{ config('SETTINGS::SYSTEM:ENABLE_UPGRADE') == 'true' ? 'checked' : '' }}
+                                    type="checkbox">
+                                <label for="enable-upgrade">{{ __('Enable upgrade/downgrade of servers') }} </label>
+                            </div>
+                            <i data-toggle="popover" data-trigger="hover" data-html="true"
+                                data-content="{{ __('Allow upgrade/downgrade to a new product for the given server') }}"
+                                class="fas fa-info-circle"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
                     <div class="custom-control mb-3 p-0">
                         <div class="col m-0 p-0 d-flex justify-content-between align-items-center">
                             <label for="initial-credits">{{ __('Server Allocation Limit') }}</label>
@@ -191,6 +222,8 @@
                             class="form-control @error('allocation-limit') is-invalid @enderror" required>
                     </div>
                 </div>
+
+
             </div>
 
                 {{-- Design --}}

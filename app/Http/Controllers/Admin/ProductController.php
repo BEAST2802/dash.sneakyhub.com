@@ -59,7 +59,7 @@ class ProductController extends Controller
     {
         $request->validate([
             "name" => "required|max:30",
-            "price" => "required|numeric|max: 2147483647|min:0",
+            "price" => "required|numeric|max:2147483647|min:0",
             "memory" => "required|numeric|max:1000000|min:5",
             "cpu" => "required|numeric|max:1000000|min:0",
             "swap" => "required|numeric|max:1000000|min:0",
