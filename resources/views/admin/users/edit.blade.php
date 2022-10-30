@@ -72,7 +72,7 @@
                                 <div class="form-group">
                                     <label for="credits">{{CREDITS_DISPLAY_NAME}}</label>
                                     <input value="{{$user->credits}}" id="credits" name="credits" step="any" min="0"
-                                           max="99999999"
+                                           max="9999999999"
                                            type="number" class="form-control @error('credits') is-invalid @enderror"
                                            required="required">
                                     @error('credits')
@@ -84,7 +84,7 @@
                                 <div class="form-group">
                                     <label for="server_limit">{{__('Server Limit')}}</label>
                                     <input value="{{$user->server_limit}}" id="server_limit" name="server_limit" min="0"
-                                           max="1000000"
+                                           max="100000000"
                                            type="number"
                                            class="form-control @error('server_limit') is-invalid @enderror"
                                            required="required">

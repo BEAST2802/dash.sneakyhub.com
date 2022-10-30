@@ -49,7 +49,7 @@ class VoucherController extends Controller
             'memo'       => 'nullable|string|max:191',
             'code'       => 'required|string|alpha_dash|max:36|min:4|unique:vouchers',
             'uses'       => 'required|numeric|max:2147483647|min:1',
-            'credits'    => 'required|numeric|between:0,99999999',
+            'credits'    => 'required|numeric|between:0,9999999999',
             'expires_at' => 'nullable|multiple_date_format:d-m-Y H:i:s,d-m-Y|after:now|before:10 years',
         ]);
 
@@ -95,7 +95,7 @@ class VoucherController extends Controller
             'memo'       => 'nullable|string|max:191',
             'code'       => "required|string|alpha_dash|max:36|min:4|unique:vouchers,code,{$voucher->id}",
             'uses'       => 'required|numeric|max:2147483647|min:1',
-            'credits'    => 'required|numeric|between:0,99999999',
+            'credits'    => 'required|numeric|between:0,9999999999',
             'expires_at' => 'nullable|multiple_date_format:d-m-Y H:i:s,d-m-Y|after:now|before:10 years',
         ]);
 
@@ -151,7 +151,7 @@ class VoucherController extends Controller
             'code' => __('You already redeemed this voucher code')
         ]);
 
-        if ($request->user()->credits + $voucher->credits >= 99999999) throw ValidationException::withMessages([
+        if ($request->user()->credits + $voucher->credits >= 9999999999) throw ValidationException::withMessages([
             'code' => "You can't redeem this voucher because you would exceed the  limit of " . CREDITS_DISPLAY_NAME
         ]);
 

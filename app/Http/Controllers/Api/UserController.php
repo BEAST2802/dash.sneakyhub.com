@@ -86,8 +86,8 @@ class UserController extends Controller
         $request->validate([
             "name" => "sometimes|string|min:4|max:30",
             "email" => "sometimes|string|email",
-            "credits" => "sometimes|numeric|min:0|max:1000000",
-            "server_limit" => "sometimes|numeric|min:0|max:1000000",
+            "credits" => "sometimes|numeric|min:0|max:9999999999",
+            "server_limit" => "sometimes|numeric|min:0|max:100000000",
             "role" => ['sometimes', Rule::in(['admin', 'mod', 'client', 'member'])],
         ]);
 
@@ -127,12 +127,12 @@ class UserController extends Controller
         $user = $discordUser ? $discordUser->user : User::findOrFail($id);
 
         $request->validate([
-            "credits" => "sometimes|numeric|min:0|max:1000000",
-            "server_limit" => "sometimes|numeric|min:0|max:1000000",
+            "credits" => "sometimes|numeric|min:0|max:9999999999",
+            "server_limit" => "sometimes|numeric|min:0|max:100000000",
         ]);
 
         if ($request->credits) {
-            if ($user->credits + $request->credits >= 99999999) throw ValidationException::withMessages([
+            if ($user->credits + $request->credits >= 9999999999) throw ValidationException::withMessages([
                 'credits' => "You can't add this amount of credits because you would exceed the credit limit"
             ]);
             event(new UserUpdateCreditsEvent($user));
@@ -163,8 +163,8 @@ class UserController extends Controller
         $user = $discordUser ? $discordUser->user : User::findOrFail($id);
 
         $request->validate([
-            "credits" => "sometimes|numeric|min:0|max:1000000",
-            "server_limit" => "sometimes|numeric|min:0|max:1000000",
+            "credits" => "sometimes|numeric|min:0|max:9999999999",
+            "server_limit" => "sometimes|numeric|min:0|max:100000000",
         ]);
 
         if ($request->credits) {
